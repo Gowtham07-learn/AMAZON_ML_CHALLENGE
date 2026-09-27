@@ -1,0 +1,131 @@
+# ==========================================
+# Byte-compiled / optimized / Python caches
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C extensions
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# Virtual Environments
+# ==========================================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# Datasets & Large Data Files
+# ==========================================
+# Student resources and competition raw data
+student_resource/dataset/
+
+# Pipeline data directories
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/**/.gitkeep
+data/processed/*
+!data/processed/**/.gitkeep
+
+# Large data formats
+*.tsv
+*.csv
+*.parquet
+*.feather
+*.arrow
+*.jsonl
+*.h5
+*.hdf5
+*.npy
+*.npz
+
+# Compression archives
+*.zip
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+*.rar
+
+# Allow test fixtures to be committed
+!tests/fixtures/*
+
+# ==========================================
+# Model Weights, Embeddings & Large Artifacts
+# ==========================================
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.pkl
+*.pickle
+*.joblib
+models/
+checkpoints/
+saved_models/
+
+# ==========================================
+# Logs & Reports
+# ==========================================
+logs/*
+!logs/.gitkeep
+*.log
+
+# ==========================================
+# Jupyter Notebooks Checkpoints
+# ==========================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ==========================================
+# Testing & Code Quality
+# ==========================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ==========================================
+# OS & System-specific Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+__MACOSX/
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
