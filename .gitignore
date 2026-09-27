@@ -129,3 +129,12 @@ __MACOSX/
 *.swp
 *.swo
 *~
+
+# ==========================================
+# Scratch & Local Staging
+# ==========================================
+scratch/
+submission/
+*.db
+output/
+

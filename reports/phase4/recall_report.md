@@ -1,32 +1,43 @@
-# Phase 4: Blocking Recall Evaluation Report
+# Phase 4: Lean Blocking Recall Evaluation Report
 
 ## 1. Executive Summary
 - **Candidate File**: `candidate_pairs.tsv`
-- **Pair-Level Recall**: **8.61%**
-- **Entity-Level Coverage**: **31.41%**
-- **True Matches Captured**: 29,411 / 341,710
-- **Evaluated S1 Entities**: 98,649
-- **Average Candidates / Entity**: 571.38
+- **Candidate File Size**: **0.76 GB** (819,618,422 bytes)
+- **Global Pair-Level Blocking Recall**: **62.58%**
+- **Global Entity-Level Coverage**: **88.23%**
+- **True Matches Captured**: **4,779,994** / 7,638,365
+- **Total S1 Queries Evaluated**: 2,206,821
+- **Total Candidate Links Generated**: 61,212,492
+- **Average Candidates / S1**: **27.75**
 
-## 2. Blocking Configuration (FINAL_BLOCKS)
-The candidate generation used the following 6 deterministic blocks:
+## 2. Recall Breakdown by Entity
+- **Full Recall (100% true matches found)**: 764,617 (34.65%)
+- **Partial Recall (>=1 true match found)**: 1,182,512 (53.58%)
+- **Zero Recall (0 true matches found)**: 259,692 (11.77%)
+
+## 3. Blocking Configuration (`TIGHT_BLOCKS`)
 - `exact_name`
 - `exact_address`
-- `exact_postal`
 - `country_first_name`
 - `country_region_first`
 - `postal_prefix_first`
 
-Oversized block cap: `MAX_BLOCK_SIZE = 5000`
+- **Bucket Cap**: `MAX_BLOCK_SIZE = 150`
+- **Per-Entity Cap**: `TOP_K_CANDIDATES = 30` (Ranked by Provenance Count)
 
-## 3. Sample Missed Matches
-- `Source 1 (S1-925783039)` <--> `Matched (S2-517291332)`
-- `Source 1 (S1-925783039)` <--> `Matched (S3-698172821)`
-- `Source 1 (S1-925783039)` <--> `Matched (S3-997698194)`
-- `Source 1 (S1-925783039)` <--> `Matched (S2-157377754)`
-- `Source 1 (S1-773889195)` <--> `Matched (S3-622232873)`
-- `Source 1 (S1-773889195)` <--> `Matched (S3-202893869)`
-- `Source 1 (S1-773889195)` <--> `Matched (S3-161452820)`
-- `Source 1 (S1-773889195)` <--> `Matched (S3-189140669)`
-- `Source 1 (S1-773889195)` <--> `Matched (S2-374107005)`
+## 4. Sample Missed Matches
 - `Source 1 (S1-773889195)` <--> `Matched (S2-970528089)`
+- `Source 1 (S1-773889195)` <--> `Matched (S3-202893869)`
+- `Source 1 (S1-377745466)` <--> `Matched (S3-402918963)`
+- `Source 1 (S1-133037285)` <--> `Matched (S3-183080822)`
+- `Source 1 (S1-755362802)` <--> `Matched (S3-440254853)`
+- `Source 1 (S1-851869949)` <--> `Matched (S3-949828938)`
+- `Source 1 (S1-629417405)` <--> `Matched (S3-786131946)`
+- `Source 1 (S1-629417405)` <--> `Matched (S2-928426462)`
+- `Source 1 (S1-629417405)` <--> `Matched (S3-438606634)`
+- `Source 1 (S1-629417405)` <--> `Matched (S3-606982601)`
+- `Source 1 (S1-22305073)` <--> `Matched (S2-578011604)`
+- `Source 1 (S1-504790211)` <--> `Matched (S2-482219248)`
+- `Source 1 (S1-504790211)` <--> `Matched (S3-956253301)`
+- `Source 1 (S1-564729135)` <--> `Matched (S3-209102076)`
+- `Source 1 (S1-564729135)` <--> `Matched (S2-256254095)`
